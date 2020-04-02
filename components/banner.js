@@ -2,96 +2,97 @@ const Banner = () => (
   <section className='main'>
     <div className='row'>
       <h2>
-        <div className='line'>
-          <span>You may forget it</span>
-        </div>
-        <div className='line'>
-          <span>and that's alright !</span>
-        </div>
+        You may forget it and that's alright !
       </h2>
+      <div className="banner-img">
+        <img src='/taxi-programming.png'/>
+      </div>
     </div>
     
-    <img src='/taxi-programming.png'/>
 
     <style jsx>{`
       .main {
-        margin-top: 8rem;
         margin-bottom: 4rem;
         overflow: hidden;
-
       }
 
       .row {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        height: 60vh;
-        margin-left: 6rem;
+        align-items: center;
+        justify-content: space-between;
       }
 
       h2 {
         font-size: 4rem;
-        line-height: 4.5rem;
         font-weight: 700;
+        line-height: 4.5rem;
+        flex: 2;
       }
 
-      .line {
-        opacity: 1;
-        z-index: 100;
+      .banner-img {
         position: relative;
-        height: 68px;
-        margin-bottom: 8px;
-        overflow: hidden;
+        height: auto;
+        width: 650px;
       }
     
+      
       img {
-        width: 700px;
+        object-fit: cover;
+        width: 100%;
         height: auto;
-        position: absolute;
-        top: 20px;
-        right: 20px;
       }
 
-      @media screen and (max-width: 1340px) {
+      @media screen and (max-width: 1296px) {
+        h2 {
+          font-size: 3.5rem;
+          line-height: 3.5rem;
+        }
+      }
+
+      @media screen and (max-width: 1250px) {
         h2 {
           font-size: 3rem;
-          line-height: 3.8rem;
-        }
-        img {
-          width: 600px;
-          top: 40px;
         }
 
-        .line {
-          height: 60px;
+        .banner-img {
+          width: 500px;
         }
       }
 
-      @media screen and (max-width: 1150px) {
+      @media screen and (max-width: 1024px) {
         h2 {
-          font-size: 2.8rem;
-          line-height: 3rem;
-        }
-        img {
-          width: 550px;
-          top: 70px;
+          font-size: 2.5rem;
         }
 
-        .line {
-          height: 55px;
+        .banner-img {
+          width: 400px;
+        }
+      }
+
+      @media screen and (max-width: 1024px) {
+        h2 {
+          font-size: 2.5rem;
+        }
+
+        .banner-img {
+          width: 400px;
         }
       }
 
       @media screen and (max-width: 768px) {
-        h2 {
-          font-size: 3rem;
+        .row {
+          flex-direction: column;
         }
 
-        img {
-          width: 500px;
+        h2 {
+          text-align: center;
+        }
+
+        .banner-img {
+          width: 300px;
         }
       }
-      
+
     `}</style>
   </section>
 )

@@ -1,3 +1,5 @@
+import Link from 'next/link'
+
 const Card = ({title, img}) => {
   return (
     <div className='card-wrapper'>
@@ -7,7 +9,9 @@ const Card = ({title, img}) => {
         </h2>
       </div>
       <div className="card-img">
-        <img src={img} alt="card image"/>
+        <Link href='/posts/[id]' as={`/posts/${title}`}>
+          <img src={img} alt="card image"/>
+        </Link>
       </div>
 
       <style jsx>{`
@@ -15,21 +19,16 @@ const Card = ({title, img}) => {
           display: flex;
           flex-direction: column;
           align-items: center;
-          flex: 1;
-          border: 1px solid #000;
           padding: 2rem 0;
+          width: 30rem;
         }
 
-        .card-wrapper:not(:last-child) {
-          margin-right: 2rem;
-        }
-
-        h2 {
-          margin-top: 0;
+        .card-img {
+          cursor: pointer;
         }
 
         img {
-          width: 200px;
+          width: 300px;
           heigth: auto;
         }
       `}
@@ -39,17 +38,29 @@ const Card = ({title, img}) => {
 }
 
 const CardContainer = () => (
-  <div className='card-container'>
-    <Card title='Arrays' img='/arrays.png' />
-    <Card title='Objects' img='/objects.png' />
-
+  <main className='card-section'>
+    <h1>JS Data Structures</h1>
+    <div className='card-container'>
+      <Card title='Arrays' img='/arrays.png'/>
+      <Card title='Objects' img='/objects.png'/>
+    </div>
     <style jsx>{`
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      .card-section {
+        text-align: center;
+      }
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      .card-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
     `}
-    </style>
-  </div>
+    </style>   
+  </main>
 )
 
 export default CardContainer
