@@ -1,5 +1,6 @@
 import Layout from '../layout/layout'
 import Head from 'next/head'
+import CardContainer from './../components/card';
 
 const Home = () => (
   <Layout>
@@ -7,7 +8,7 @@ const Home = () => (
       <title>Create Next App</title>
       <link rel="icon" href="/favicon.ico" />
     </Head>
-
+    <CardContainer />
     <main>
     </main>
 

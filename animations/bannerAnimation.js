@@ -1,36 +1,19 @@
-import gsap from 'gsap';
+// import {gsap} from 'gsap';
+import { gsap } from "gsap/dist/gsap"
 
-const gsapAnimations = (completeAnimation) =>  {
-    // GSAP Timeline
+const gsapAnimations = () =>  {
     const tl = gsap.timeline()
     
-    tl.from('.line span', 1.8, {
+    tl.from('.line', 1.6, {
+      opacity: 0,
       y: 100,
       ease: 'power4.out',
       delay: 1,
-      sewY: 7,
       stagger: { amount: 0.3 }
     })
-    .to('.overlay-top', 1.6, {
-      height: 0,
-      ease: 'expo.inOut',
-      stagger: 0.4
-    })
-    .to('.overlay-bottom', 1.6, {
-      width: 0,
-      ease: 'expo.inOut',
-      delay: -.8,
-      stagger: { amount: 0.4 }
-    })
-    .to('.intro-overlay', 0, {
-      css: { display: 'none' }
-    })
-    .from('.case-image img', 1.6, {
-      scale: 1.4,
-      ease: 'expo.inOut',
-      delay: -2,
-      stagger: { amount: 0.4 },
-      onComplete: completeAnimation
+    .from('img', 1.4, {
+      opacity: 0,
+      x: 300,
     })
 }
 
