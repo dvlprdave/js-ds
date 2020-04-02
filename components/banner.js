@@ -1,21 +1,21 @@
 const Banner = () => (
   <section className='main'>
-    <div className='container'>
-      <div className='row'>
-        <h2>
-          <div className='line'>
-            <span>Creating unique brands is</span>
-          </div>
-          <div className='line'>
-            <span>what we do</span>
-          </div>
-        </h2>
-      </div>
+    <div className='row'>
+      <h2>
+        <div className='line'>
+          <span>You may forget it</span>
+        </div>
+        <div className='line'>
+          <span>and that's alright !</span>
+        </div>
+      </h2>
     </div>
+
+    <img src='/taxi-programming.png'/>
+    
     <style jsx>{`
       .main {
-        height: 50vh; 
-        height: calc(var(--vh, 1vh) * 50);
+        margin-top: 8rem;
       }
 
       .row {
@@ -29,14 +29,22 @@ const Banner = () => (
         font-weight: 700;
       }
 
-
       .line {
+        z-index: 9;
         position: relative;
         height: 56px;
         margin-bottom: 8px;
         overflow: hidden;
+        mix-blend-mode: overlay;
       }
     
+      img {
+        width: 700px;
+        height: auto;
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
     `}</style>
   </section>
 )
