@@ -1,16 +1,5 @@
-import {useEffect} from 'react'
-import gsapAnimations from '../animations/bannerAnimation'
-
-import Banner from "../components/banner"
-const Layout = ({children}) => {
-  useEffect(() => {
-    // gsapAnimations()
-    console.log('reload log');
-    
-  }, [])
-  return (
+const Layout = ({children}) => (
   <div className='container'>
-    <Banner />
     {children}
 
     <style jsx>{`
@@ -25,6 +14,5 @@ const Layout = ({children}) => {
     </style>
   </div>
 )
-    }
 
 export default Layout

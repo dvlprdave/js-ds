@@ -14,12 +14,16 @@ const Banner = () => (
       .main {
         margin-bottom: 4rem;
         overflow: hidden;
+        min-height: 100vh;
+
+        display: flex;
       }
 
       .row {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
       }
 
       h2 {
@@ -35,7 +39,6 @@ const Banner = () => (
         width: 650px;
       }
     
-      
       img {
         object-fit: cover;
         width: 100%;
@@ -82,9 +85,12 @@ const Banner = () => (
       @media screen and (max-width: 768px) {
         .row {
           flex-direction: column;
+          justify-content: center;
+          min-height: 100vh;
         }
 
         h2 {
+          flex: 0;
           text-align: center;
         }
 

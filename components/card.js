@@ -25,12 +25,23 @@ const Card = ({title, img}) => {
 
         .card-img {
           cursor: pointer;
+          transition: 400ms ease-in-out;
+        }
+
+        .card-img:hover {
+          filter: grayscale(1);
         }
 
         img {
           width: 300px;
           heigth: auto;
         }
+
+        @media screen and (max-width: 768px) {
+          .card-img {
+          width: 300px;
+        }
+      }
       `}
       </style>
     </div>
@@ -46,6 +57,7 @@ const CardContainer = () => (
     </div>
     <style jsx>{`
       .card-section {
+        opacity: 1;
         text-align: center;
       }
 
