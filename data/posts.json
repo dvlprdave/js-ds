@@ -1,0 +1,10 @@
+{
+  "arrays": {
+    "title": "Array",
+    "description": "Arrays are an ordered collection of items. These items can be any type of data. The index of each array will start at 0. This means that the first item will be 0 and the second item will be 1 and so on."
+  },
+  "objects": {
+    "title": "Objects",
+    "description": "Arrays are an ordered collection of items. These items can be any type of data. The index of each array will start at 0. This means that the first item will be 0 and the second item will be 1 and so on."
+  }
+}
