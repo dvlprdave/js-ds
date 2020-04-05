@@ -1,35 +1,58 @@
-import Layout from './../../layout/layout';
-import fetch from 'isomorphic-unfetch'
+import Layout from '../../layout/layout'
+
 import fs from 'fs'
+import path from 'path'
 
-const Post = ({id}) => (
-  <Layout>
-    <h1>This is the id: {id}</h1>
 
-    <style jsx>{`
-      h1, p {
-        text-align: center;
-      }  
-    `}</style>
-  </Layout>
-)
+const Post = ({posts}) => {
+    
+  return (
+    <Layout>
+      {posts.map((post) => (
+        <p>{post}</p>
+      ))
+      }
+
+      <style jsx>{`
+        h1, p {
+          text-align: center;
+        }  
+      `}</style>
+    </Layout>
+  )
+}
+
 
 export async function getStaticProps() {
-  return { 
-    params: {id}
+  const postsDirectory = path.join(process.cwd(), 'data')
+  const filenames = fs.readdirSync(postsDirectory)
+
+  const posts = filenames.map(filename => {
+    const filePath = path.join(postsDirectory, filename)
+    const fileContents = fs.readFileSync(filePath, 'utf8')
+
+    return {
+      filename,
+      content: fileContents,
+    }
+  })
+
+  return {
+    props: {
+      posts,
+    },
   }
 }
 
 export async function getStaticPaths() {
-
-  const files = fs.readdirSync('data')
-  
   return {
-    paths: files.map(filename => ({
-      id: filename.replace('js', '')
-    })),
-    fallback: true
-  }
+    paths: [
+      { params: { id: 'arrays' } },
+      { params: { id: 'objects' } }
+    ],
+    fallback: false
+  };
 }
+
 
 export default Post

@@ -52,8 +52,8 @@ const CardContainer = () => (
   <main className='card-section'>
     <h1>JS Data Structures</h1>
     <div className='card-container'>
-      <Card title='Arrays' img='/arrays.png'/>
-      <Card title='Objects' img='/objects.png'/>
+      <Card title='arrays' img='/arrays.png'/>
+      <Card title='objects' img='/objects.png'/>
     </div>
     <style jsx>{`
       .card-section {

@@ -1,4 +1,4 @@
-import {useEffect} from 'react'
+// import {useEffect} from 'react'
 // import gsapAnimations from '../animations/bannerAnimation'
 
 import Layout from '../layout/layout'
@@ -8,10 +8,10 @@ import CardContainer from './../components/card';
 
 const Home = () => {
 
-  useEffect(async () => {
-    // gsapAnimations()
+  // useEffect(async () => {
+  //   // gsapAnimations()
     
-  }, [])
+  // }, [])
     
   return (
     <Layout>
