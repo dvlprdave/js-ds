@@ -12,6 +12,19 @@ const Layout = ({children}) => (
     
     `}
     </style>
+
+    <style jsx global>{`
+      html,
+      body {
+        font-family: "Josefin Sans", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+          Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    `}
+    </style>
   </div>
 )
 

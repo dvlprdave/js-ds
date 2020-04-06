@@ -1,16 +1,18 @@
 import Link from 'next/link'
 
-const Card = ({title, img}) => {
+const Card = ({ title, img }) => {
   return (
     <div className='card-wrapper'>
+
       <div className="card-heading">
         <h2>
           {title}
         </h2>
       </div>
+
       <div className="card-img">
         <Link href='/posts/[id]' as={`/posts/${title}`}>
-          <img src={img} alt="card image"/>
+          <img src={img} alt="card image" />
         </Link>
       </div>
 
@@ -52,9 +54,10 @@ const CardContainer = () => (
   <main className='card-section'>
     <h1>JS Data Structures</h1>
     <div className='card-container'>
-      <Card title='arrays' img='/arrays.png'/>
-      <Card title='objects' img='/objects.png'/>
+      <Card title='Arrays' img='/arrays.png' />
+      <Card title='Objects' img='/objects.png' />
     </div>
+
     <style jsx>{`
       .card-section {
         opacity: 1;
@@ -71,7 +74,7 @@ const CardContainer = () => (
         flex-wrap: wrap;
       }
     `}
-    </style>   
+    </style>
   </main>
 )
 
