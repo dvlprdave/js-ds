@@ -11,7 +11,7 @@ const Card = ({ title, img }) => {
       </div>
 
       <div className="card-img">
-        <Link href='/posts/[id]' as={`/posts/${title}`}>
+        <Link href='/array' as={`/${title}`}>
           <img src={img} alt="card image" />
         </Link>
       </div>
@@ -50,7 +50,7 @@ const Card = ({ title, img }) => {
   )
 }
 
-const CardContainer = () => (
+const CardContainer = ({data}) => (
   <main className='card-section'>
     <h1>JS Data Structures</h1>
     <div className='card-container'>
