@@ -19,8 +19,7 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Banner />
-      {/* <CardContainer titleData={titleData}/> */}
-      <CardContainer />
+        <CardContainer />
     </Layout>
   )
 }
