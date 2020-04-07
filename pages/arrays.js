@@ -12,7 +12,7 @@ const Home = () => {
       <SWRConfig value={{ revalidateOnFocus: false, fetcher }}>
         {/* <Crimes /> */}
         {/* <DataFetcher /> */}
-        <DisplayArrays />
+        <DisplayArrays idType='array' />
       </SWRConfig>
     </Layout>
   )

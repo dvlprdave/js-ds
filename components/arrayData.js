@@ -1,59 +1,43 @@
 import {useState} from "react";
 import useSWR from "swr";
 
-function DisplayArrays() {
+import DisplayData from './displayData';
+
+function DisplayArrays({idType}) {
   const [filterCategory, setFilterCategory] = useState(null);
+
   const { data, error } = useSWR('/api/randomQuote');
+
+  console.log(data);
+  
   
   if (error) return <div>Error...</div>;
   if (!data) return <div>Loading...</div>;
 
-  const filterForArrays = data.filter(item => item.id === 'array')
-  
-  // const uniqueCategories = [...new Set(data.map(title => title.title))]
+  const filterForArrays = data.filter(item => item.id === `${idType}`)
 
+  // Map over filtered array id's and return each title
+  const uniqueArray = filterForArrays.map(item => item.title)
 
+  // If theres a filtered category, then filter each title to see if
+  // it's equal to the one being filtered.
+  // Otherwise, render unfiltered list
   const filteredData = filterCategory
-    ? data.filter(item => item.id === filterCategory)
-    : data;
+    ? filterForArrays.filter(item => item.title === filterCategory)
+    : filterForArrays;
 
-    console.log(filteredData);
-    
   return (
     <>
-      {filterForArrays.map((category, i) => (
-        <button
-          onClick={() => {
-            setFilterCategory(category);
-          }}
-          key={i}
-        >
-          {category.title}
-        </button>
-      ))}
-
-      {filterCategory && (
-        <button
-          onClick={() => {
-            setFilterCategory(null);
-          }}
-        >
-          reset
-        </button>
-      )}
-
-      <div>
-        {filteredData.map((item, i) => {
-          return (
-            <div key={i}>
-              <h2>{item.title}</h2>
-              <p>{item.description}</p>
-            </div>
-          )
-        })}
-      </div>
+    <DisplayData 
+      uniqueArray={uniqueArray}
+      filteredData={filteredData}
+      filterCategory={filterCategory}
+      setFilterCategory={setFilterCategory}
+    />
     </>
   );
 }
+
+
 
 export default DisplayArrays
