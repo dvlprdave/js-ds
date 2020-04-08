@@ -2,16 +2,16 @@ import { SWRConfig } from "swr";
 import fetcher from '../helper/fetcher'
 
 import Layout from '../layout/layout'
+// import DataFetcher from '../components/dataFetcher';
 import DisplayData from '../components/fetchDisplayData';
-import DataFetcher from "../components/dataFetcher";
 
 const Home = () => {
   return (
     <Layout> 
      {/* revalidateOnFocus = false because data is constant */}
       <SWRConfig value={{ revalidateOnFocus: false, fetcher }}>
-        <DisplayData idType='array' />
         {/* <DataFetcher /> */}
+        <DisplayData idType='object' />
       </SWRConfig>
     </Layout>
   )

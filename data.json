@@ -1,25 +1,44 @@
-[
-  {
-   "id": "array",
-   "title": "Array",
-   "description": "Arrays are an ordered collection of items. These items can be any type of data. The index of each array will start at 0. This means that the first item will be 0 and the second item will be 1 and so on."
- },
-
- {
-   "id": "object",
-   "title": "Objects",
-   "description": "Objects are......"
- }, 
-
- {
-  "id": "object",
-  "title": "Object properties",
-  "description": "Objects properties are......"
-},
-
- {
-  "id": "array",
-  "title": "Array Map",
-  "description": "You can iterate over an array by......"
+{
+  "array": {
+    "id": "array",
+    "title": "Array",
+    "mainHeadline": "Arrays",
+    "component": "mainArray",
+    "description": "Arrays are an ordered collection of items. These items can be any type of data. The index of each array will start at 0. This means that the first item will be 0 and the second item will be 1 and so on.",
+    "mainDescription": "This is the main description for Arrays",
+    "methods": [
+      {
+        "id": "array",
+        "title": "Array Map",
+        "component": "arrayMap",
+        "description": "You can iterate over an array by......"
+      },
+      {
+        "id": "array",
+        "title": "Array Push",
+        "component": "arrayMap",
+        "description": "array.push() allows you to"
+      },
+      {
+        "id": "array",
+        "title": "Array Pop",
+        "component": "arrayMap",
+        "description": "array.pop() allows you to"
+      }
+    ]
+  },
+  "object": {
+    "id": "object",
+    "mainHeadline": "Objects",
+    "mainDescription": "This is the main description for Objects",
+    "title": "Objects",
+    "description": "Objects are......",
+    "methods": [
+      {
+        "title": "Object Create",
+        "component": "objectCreate",
+        "description": "Object creation can be done by the following......"
+      }
+    ]
+  }
 }
-]
