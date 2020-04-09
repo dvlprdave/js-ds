@@ -10,7 +10,7 @@
       {
         "id": "array",
         "title": "Array Map",
-        "component": "ArrayMap",
+        "component": "Array Map",
         "description": "You can iterate over an array by......"
       },
       {
