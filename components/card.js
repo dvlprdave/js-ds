@@ -36,14 +36,14 @@ const Card = ({ title, img }) => {
 
         img {
           width: 300px;
-          heigth: auto;
+          height: auto;
         }
 
         @media screen and (max-width: 768px) {
           .card-img {
           width: 300px;
+          }
         }
-      }
       `}
       </style>
     </div>

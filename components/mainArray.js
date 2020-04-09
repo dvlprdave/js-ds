@@ -1,6 +1,5 @@
 const MainArray = props => (
-  <div className="foo">
-    <hr />
+  <div>
     Hi I'm the Array Map component
   </div>
 );

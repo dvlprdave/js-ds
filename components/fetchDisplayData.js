@@ -1,64 +1,52 @@
 import {useState} from "react";
 import useSWR from "swr";
 
-import DisplayData from './dataUi';
 import * as Cards from './methods'
+import MainArray from './mainArray'
 
 function FetchDisplayData({idType}) {
-  const [filterCategory, setFilterCategory] = useState(null);
   const [selectedMethod, setSelectedMethod] = useState('')
-
   const { data, error } = useSWR('/api/randomQuote');
-  console.log(data);
-  console.log(selectedMethod);
-  
-  
   
   if (error) return <div>Error...</div>;
   if (!data) return <div>Loading...</div>;
 
-
-  const filterForArrays = data.array.methods.filter(item => item.id === `${idType}`)
-  const componentFilter = data.array.methods.map(item => item.component)
-
-  // Map over filtered array id's and return each title
-  const uniqueArray = filterForArrays.map(item => item.title)
-
-  // If theres a filtered category, then filter each title to see if
-  // it's equal to the one being filtered.
-  // Otherwise, render unfiltered list
-  const filteredData = filterCategory
-    ? filterForArrays.filter(item => item.title === filterCategory)
-    : filterForArrays;
+  const componentFilter = data.dataStructures.methods.filter(item => item.id === `${idType}`).map(item => item.component)
 
   const renderSelectedCard = (selectedMethod) => {
     if (!selectedMethod)
-      return <p>Nothing to display</p>;
+      return <MainArray />
 
     const Card = Cards[selectedMethod];
-
     return <Card />;
   }
 
   return (
     <>
-      <DisplayData 
-        idType={idType}
-        data={data}
-        uniqueArray={uniqueArray}
-        filteredData={filteredData}
-        filterCategory={filterCategory}
-        setFilterCategory={setFilterCategory}
-        setSelectedMethod={setSelectedMethod}
-        componentFilter={componentFilter}
-        renderSelectedCard={renderSelectedCard}
-        selectedMethod={selectedMethod}
-      />
+      {
+        componentFilter.map(title => (
+          <button
+            onClick={() => {setSelectedMethod(title)}}
+            key={title}
+          >
+            {/* Add space between component names */}
+            {
+            idType === 'array' 
+            ? `${title.slice(0, 5)} ${''} ${title.slice(5, 9)}`
+            : `${title.slice(0, 6)} ${''} ${title.slice(6, 12)}`
+            }
+          </button>
+        ))
+      }
+
+      <button onClick={() => {setSelectedMethod('')}}>
+        reset
+      </button>
+
+      <div>{renderSelectedCard(selectedMethod)}</div>
 
     </>
   );
 }
-
-
 
 export default FetchDisplayData

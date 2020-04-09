@@ -9,7 +9,6 @@ import DisplayData from '../components/fetchDisplayData';
 const Home = () => {
   // const [selectedMethod, setSelectedMethod] = useState('')
 
-
   return (
     <Layout> 
      {/* revalidateOnFocus = false because data is constant */}

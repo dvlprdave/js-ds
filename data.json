@@ -1,5 +1,5 @@
 {
-  "array": {
+  "dataStructures": {
     "id": "array",
     "title": "Array",
     "mainHeadline": "Arrays",
@@ -10,7 +10,7 @@
       {
         "id": "array",
         "title": "Array Map",
-        "component": "Array Map",
+        "component": "ArrayMap",
         "description": "You can iterate over an array by......"
       },
       {
@@ -24,19 +24,11 @@
         "title": "Array Pop",
         "component": "ArrayPop",
         "description": "array.pop() allows you to"
-      }
-    ]
-  },
-  "object": {
-    "id": "object",
-    "mainHeadline": "Objects",
-    "mainDescription": "This is the main description for Objects",
-    "title": "Objects",
-    "description": "Objects are......",
-    "methods": [
+      },
       {
+        "id": "object",
         "title": "Object Create",
-        "component": "objectCreate",
+        "component": "ObjectCreate",
         "description": "Object creation can be done by the following......"
       }
     ]
