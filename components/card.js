@@ -44,13 +44,12 @@ const Card = ({ title, img }) => {
           width: 300px;
           }
         }
-      `}
-      </style>
+      `}</style>
     </div>
   )
 }
 
-const CardContainer = ({data}) => (
+const CardContainer = () => (
   <main className='card-section'>
     <h1>JS Data Structures</h1>
     <div className='card-container'>
@@ -73,8 +72,7 @@ const CardContainer = ({data}) => (
         justify-content: center;
         flex-wrap: wrap;
       }
-    `}
-    </style>
+    `}</style>
   </main>
 )
 

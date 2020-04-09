@@ -1,6 +1,6 @@
 const MainArray = props => (
   <div>
-    Hi I'm the Array Map component
+    This is the default component when no other is selected
   </div>
 );
 

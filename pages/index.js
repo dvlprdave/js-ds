@@ -15,7 +15,7 @@ const Home = () => {
   return (
     <Layout>
       <Head>
-        <title>Create Next App</title>
+        <title>JS Data Structures</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Banner />
