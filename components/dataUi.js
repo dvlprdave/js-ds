@@ -1,9 +1,14 @@
-const DataUi = ({data, idType, filteredData, filterCategory, uniqueArray, setFilterCategory }) => (
+const DataUi = ({
+  data, idType, filteredData, filterCategory, 
+  uniqueArray, setFilterCategory, 
+  setSelectedMethod, componentFilter, 
+  renderSelectedCard, selectedMethod}) => (
   <>
-    {uniqueArray.map(title => (
+    {componentFilter.map(title => (
         <button
           onClick={() => {
-            setFilterCategory(title);
+            // setFilterCategory(title);
+            setSelectedMethod(title)
           }}
           key={title}
         >
@@ -36,10 +41,12 @@ const DataUi = ({data, idType, filteredData, filterCategory, uniqueArray, setFil
         : 
         <div>
           <h2>{data.array.title}</h2>
-          <p>{`{data.${idType}.mainDescription}`}</p>
+          <p>{data.array.mainDescription}</p>
         </div>
       }
     </div>
+
+    <div>{renderSelectedCard(selectedMethod)}</div>
   </>
 )
 

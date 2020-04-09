@@ -31,20 +31,22 @@ import fetcher from '../helper/fetcher'
 const DataFetcher = () => {
   const { data } = useSWR('/api/randomQuote', fetcher);
   // console.log(data.arrays.title);
-  // const arrays = data.arrays
+  // const arrayMap = data.array.methods.map(method => method.description)
   return (
     <>
-     <h1>{data.arrays.title}</h1>
+     <h1>{data.array.title}</h1>
       {/* <h1>{data.arrays.title}</h1>
       <p>{data.arrays.description}</p> */}
-        {data.arrays.arrayMethods.map((item, i) => {
+
+        {/* <div>{arrayMap}</div> */}
+        {/* {arrayMethods.map((item, i) => {
           return (
             <div key={i}>
               <h2>{item.title}</h2>
               <p>{item.description}</p>
             </div>
           )
-        }) }
+        }) } */}
     </>
   )
 }

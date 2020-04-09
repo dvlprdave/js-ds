@@ -10,19 +10,19 @@
       {
         "id": "array",
         "title": "Array Map",
-        "component": "arrayMap",
+        "component": "ArrayMap",
         "description": "You can iterate over an array by......"
       },
       {
         "id": "array",
         "title": "Array Push",
-        "component": "arrayMap",
+        "component": "ArrayPush",
         "description": "array.push() allows you to"
       },
       {
         "id": "array",
         "title": "Array Pop",
-        "component": "arrayMap",
+        "component": "ArrayPop",
         "description": "array.pop() allows you to"
       }
     ]
