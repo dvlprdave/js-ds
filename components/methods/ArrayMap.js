@@ -11,7 +11,7 @@ export default () => {
             <p>Some description about mapping arrays</p> 
 
             <pre>
-                <code className='language-javascript'>
+                <code className='language-javascript no-whitespace-normalization'>
                     {`
                         onSubmit(e) {
                             e.preventDefault();
