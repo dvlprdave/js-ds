@@ -1,8 +1,13 @@
 {
-  "plugins": [
-    ["prismjs", {
-        "languages": ["javascript", "css", "markup"],
-        "plugins": ["line-numbers", "normalize-whitespace"]
-    }]
-  ]
-}
+    "presets": ["next/babel"],
+    "plugins": [
+      [
+        "prismjs",
+        {
+          "languages": ["javascript", "css", "jsx"],
+          "plugins": ["line-numbers", "normalize-whitespace", "line-highlight"]
+         
+        }
+      ]
+    ]
+  }
