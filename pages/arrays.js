@@ -10,7 +10,7 @@ const Home = () => {
   // const [selectedMethod, setSelectedMethod] = useState('')
 
   return (
-    <Layout> 
+    <Layout>
      {/* revalidateOnFocus = false because data is constant */}
       <SWRConfig value={{ revalidateOnFocus: false, fetcher }}>
         <DisplayData idType='array' />

@@ -1,0 +1,10 @@
+body {
+    font-family: "Josefin Sans", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    max-width: 1560px;
+    margin: 0 auto;
+  }
+
+  * {
+    box-sizing: border-box;
+  }

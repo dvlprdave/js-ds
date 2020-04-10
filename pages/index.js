@@ -13,14 +13,22 @@ const Home = () => {
   // }, [])
 
   return (
-    <Layout>
+    <>
       <Head>
         <title>JS Data Structures</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Banner />
+      <div className='home-container'>
+        <Banner />
         <CardContainer />
-    </Layout>
+
+      <style jsx>{`
+        .home-container {
+          padding: 2rem 3rem;
+        }
+      `}</style>
+      </div>
+    </>
   )
 }
 

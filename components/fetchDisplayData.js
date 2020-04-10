@@ -2,8 +2,7 @@ import {useState} from "react";
 import useSWR from "swr";
 
 import * as Cards from './methods'
-import MainArray from './mainArray'
-import Button from './button'
+import MainComponent from './mainComponent'
 
 function FetchDisplayData({idType}) {
   const [selectedMethod, setSelectedMethod] = useState('')
@@ -13,10 +12,11 @@ function FetchDisplayData({idType}) {
   if (!data) return <div>Loading...</div>;
 
   const componentFilter = data.dataStructures.methods.filter(item => item.id === `${idType}`).map(item => item.component)
-
+  const mainComponentFilter = data.dataStructures.main.map(item => item).filter(item => item.id === `${idType}`)
+  
   const renderSelectedCard = (selectedMethod) => {
     if (!selectedMethod)
-      return <MainArray />
+      return <MainComponent data={mainComponentFilter}/>
 
     const Card = Cards[selectedMethod];
     return <Card />;
@@ -42,11 +42,6 @@ function FetchDisplayData({idType}) {
         }
       </div>
       
-
-      {/* <button onClick={() => {setSelectedMethod('')}}>
-        reset
-      </button> */}
-
       <div className='method-component'>{renderSelectedCard(selectedMethod)}</div>
 
       <style jsx>{`
@@ -59,7 +54,7 @@ function FetchDisplayData({idType}) {
         .method-list {
           display: flex;
           flex-direction: column;
-          height: 90vh;
+          height: 100vh;
           background: rgba(211, 174, 54, 1);
           padding: 1rem;
         }
@@ -67,18 +62,20 @@ function FetchDisplayData({idType}) {
         .method-component {
           align-self: center;
           justify-self: center;
+          padding: 1.5rem;
         }
 
         button {
           padding: 10px;
-          border: 1px solid #000;
           border-radius: 10px;
           width: 150px;
           margin: 0 auto;
           margin-bottom: 1rem;
           font-weight: bold;
           font-size: .88rem;
+          box-shadow: 0 1px 2px rgba(0,0,0,0.15);
         }
+
       `}</style>
     </div>
   );

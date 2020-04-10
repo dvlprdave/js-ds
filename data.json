@@ -6,6 +6,18 @@
     "component": "mainArray",
     "description": "Arrays are an ordered collection of items. These items can be any type of data. The index of each array will start at 0. This means that the first item will be 0 and the second item will be 1 and so on.",
     "mainDescription": "This is the main description for Arrays",
+    "main": [
+      {
+        "id": "array",
+        "mainTitle": "Arrays",
+        "description": "Arrays are an ordered collection of items. These items can be any type of data. The index of each array will start at 0. This means that the first item will be 0 and the second item will be 1 and so on."
+      },
+      {
+        "id": "object",
+        "mainTitle": "Objects",
+        "description": "Objects are....."
+      }
+    ],
     "methods": [
       {
         "id": "array",
