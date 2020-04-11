@@ -1,4 +1,4 @@
-const MainComponent = ({data}) => (
+const DefaultComponent = ({data}) => (
   <div>
     {data.map((item, i) => {
       return (
@@ -12,4 +12,4 @@ const MainComponent = ({data}) => (
 );
 
 
-export default MainComponent
+export default DefaultComponent

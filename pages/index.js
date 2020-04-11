@@ -2,8 +2,8 @@ import {useEffect} from 'react'
 // import gsapAnimations from '../animations/bannerAnimation'
 import Prism from 'prismjs'
 import Head from 'next/head'
-import Banner from '../components/banner'
-import CardContainer from './../components/card';
+import Banner from '../components/Banner'
+import CardContainer from './../components/Card';
 
 // TODO: Move fetcher into own component
 const Home = () => {

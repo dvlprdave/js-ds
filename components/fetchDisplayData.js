@@ -1,9 +1,9 @@
 import {useState} from "react";
 import useSWR from "swr";
 
-
 import * as Cards from './methods'
-import MainComponent from './mainComponent'
+import Navbar from '../components/Navbar'
+import MainComponent from './DefaultComponent'
 
 function FetchDisplayData({idType}) {
   const [selectedMethod, setSelectedMethod] = useState('')
@@ -26,6 +26,9 @@ function FetchDisplayData({idType}) {
   return (
     <div className='wrapper'>
       <div className='method-list'>
+
+        {mainComponentFilter.map((item) => <h1>{item.mainTitle}</h1>)}
+
         {
           componentFilter.map(title => (
             <button
@@ -43,39 +46,55 @@ function FetchDisplayData({idType}) {
         }
       </div>
       
-      <div className='method-component'>{renderSelectedCard(selectedMethod)}</div>
+      <div>
+        <Navbar />
+        <div className='method-component'> 
+          {renderSelectedCard(selectedMethod)}
+        </div>
+      </div>
 
       <style jsx>{`
         .wrapper {
           display: grid;
-          grid-template-columns: 200px 2fr;
+          grid-template-columns: 200px 1fr;
           height: 100vh;
         }
 
         .method-list {
           display: flex;
           flex-direction: column;
-          height: 100vh;
+          height: 100%;
           background: rgba(211, 174, 54, 1);
+          text-align: center;
           padding: 1rem;
         }
 
         .method-component {
-          align-self: center;
-          justify-self: center;
+          margin: 0 auto;
           padding: 1.8rem;
           max-width: 800px;
         }
 
         button {
-          padding: 10px;
-          border-radius: 10px;
           width: 100%;
           margin: 0 auto;
           margin-bottom: 1rem;
-          font-weight: bold;
+          padding: 6px 10px;
+          border-radius: 10px;
           font-size: .88rem;
+          font-weight: bold;
           box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+        }
+
+        @media screen and (max-width: 650px) {
+          .wrapper {
+            grid-template-columns: 1fr;
+          }
+
+          .method-list {
+            display: none;
+          }
+
         }
 
       `}</style>

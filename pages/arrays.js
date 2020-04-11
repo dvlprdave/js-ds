@@ -2,7 +2,7 @@ import { SWRConfig } from "swr";
 import fetcher from '../helper/fetcher'
 
 import Layout from '../layout/layout'
-import DisplayData from '../components/fetchDisplayData';
+import DisplayData from '../components/FetchDisplayData';
 
 const Home = () => {
   return (
