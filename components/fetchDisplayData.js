@@ -1,6 +1,7 @@
 import {useState} from "react";
 import useSWR from "swr";
 
+
 import * as Cards from './methods'
 import MainComponent from './mainComponent'
 
@@ -34,7 +35,7 @@ function FetchDisplayData({idType}) {
               {/* Add space between component names */}
               {
               idType === 'array' 
-              ? `${title.slice(0, 5)} ${''} ${title.slice(5, 9)}`
+              ? `${title.slice(0, 5)} ${''} ${title.slice(5, 12)}`
               : `${title.slice(0, 6)} ${''} ${title.slice(6, 12)}`
               }
             </button>
@@ -62,13 +63,14 @@ function FetchDisplayData({idType}) {
         .method-component {
           align-self: center;
           justify-self: center;
-          padding: 1.5rem;
+          padding: 1.8rem;
+          max-width: 800px;
         }
 
         button {
           padding: 10px;
           border-radius: 10px;
-          width: 150px;
+          width: 100%;
           margin: 0 auto;
           margin-bottom: 1rem;
           font-weight: bold;

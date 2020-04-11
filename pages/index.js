@@ -1,16 +1,16 @@
-// import {useEffect} from 'react'
+import {useEffect} from 'react'
 // import gsapAnimations from '../animations/bannerAnimation'
-import Layout from '../layout/layout'
+import Prism from 'prismjs'
 import Head from 'next/head'
 import Banner from '../components/banner'
 import CardContainer from './../components/card';
 
 // TODO: Move fetcher into own component
 const Home = () => {
-  // useEffect(async () => {
-  //   // gsapAnimations()
-    
-  // }, [])
+  useEffect(async () => {
+    // gsapAnimations()
+      Prism.highlightAll()
+  }, [])
 
   return (
     <>
@@ -25,6 +25,7 @@ const Home = () => {
       <style jsx>{`
         .home-container {
           padding: 2rem 3rem;
+          margin: 0 auto;
         }
       `}</style>
       </div>

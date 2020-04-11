@@ -38,6 +38,18 @@
         "description": "array.pop() allows you to"
       },
       {
+        "id": "array",
+        "title": "Array Shift",
+        "component": "ArrayShift",
+        "description": "array.shift() allows you to"
+      },
+      {
+        "id": "array",
+        "title": "Array Unshift",
+        "component": "ArrayUnshift",
+        "description": "array.unshift() allows you to"
+      },
+      {
         "id": "object",
         "title": "Object Create",
         "component": "ObjectCreate",

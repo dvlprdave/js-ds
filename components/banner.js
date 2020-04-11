@@ -12,18 +12,19 @@ const Banner = () => (
 
     <style jsx>{`
       .main {
+        display: flex;
+        justify-content: center;
+
+        min-height: 100vh;
         margin-bottom: 4rem;
         overflow: hidden;
-        min-height: 100vh;
-
-        display: flex;
       }
 
       .row {
         display: flex;
         align-items: center;
         justify-content: space-between;
-
+        max-width: 1560px;
       }
 
       h2 {

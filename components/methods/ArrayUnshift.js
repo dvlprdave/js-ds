@@ -7,33 +7,33 @@ export default () => {
 }, [])
   return (
     <>
-      <h1>Array.pop()</h1>
-      <p>Removes the last index from an array.</p> 
+      <h1>Array.unshift()</h1>
+      <p>Adds a given amount of elements to the start of an array.</p> 
 
       <pre>
         <code className='language-javascript'>
         {`
           const characters = ["Legolas", "Aragon", "Gandalf", "Sauron"]
 
-          characters.pop()
+          characters.unshift("Frodo", "Sam")
           
           console.log(characters)
-          // OUTPUT --> Sauron
+          // OUTPUT --> Frodo, Sam, Legolas, Aragon, Gandalf, Sauron
         `}
         </code>
       </pre>
 
-      <p>Pop() mutates the original array. The return value is the removed element.</p>
+      <p>Unshift() mutates the original array and the returned result is the new length of the array </p>
 
       <pre>
         <code className='language-javascript'>
         {`
           const characters = ["Legolas", "Aragon", "Gandalf", "Sauron"]
 
-          const removedCharacter = characters.pop()
-          
-          console.log(removedCharacter)
-          // OUTPUT --> Sauron
+          const unshiftCharacters = characters.unshift("Frodo", "Sam")
+           
+          console.log(unshiftCharacters)
+          // OUTPUT --> 6
         `}
         </code>
       </pre>

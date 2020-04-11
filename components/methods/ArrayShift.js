@@ -7,33 +7,33 @@ export default () => {
 }, [])
   return (
     <>
-      <h1>Array.pop()</h1>
-      <p>Removes the last index from an array.</p> 
+      <h1>Array.shift()</h1>
+      <p>Removes the first item in an array.</p> 
 
       <pre>
         <code className='language-javascript'>
         {`
           const characters = ["Legolas", "Aragon", "Gandalf", "Sauron"]
 
-          characters.pop()
+          characters.shift()
           
           console.log(characters)
-          // OUTPUT --> Sauron
+          // OUTPUT --> Aragon, Gandalf, Sauron
         `}
         </code>
       </pre>
-
-      <p>Pop() mutates the original array. The return value is the removed element.</p>
+      
+      <p>Shift() mutates the originl array. The returned value from shift() is the removed element</p>
 
       <pre>
         <code className='language-javascript'>
         {`
           const characters = ["Legolas", "Aragon", "Gandalf", "Sauron"]
 
-          const removedCharacter = characters.pop()
+          const shiftedCharacter = characters.shift()
           
-          console.log(removedCharacter)
-          // OUTPUT --> Sauron
+          console.log(characters)
+          // OUTPUT --> Legolas
         `}
         </code>
       </pre>

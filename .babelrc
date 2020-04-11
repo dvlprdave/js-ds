@@ -5,7 +5,11 @@
         "prismjs",
         {
           "languages": ["javascript", "css", "jsx"],
-          "plugins": ["line-numbers", "normalize-whitespace", "line-highlight"]
+          "plugins": [
+            "line-numbers", 
+            "normalize-whitespace", 
+            "line-highlight"
+          ]
          
         }
       ]
