@@ -2,6 +2,7 @@ import {useEffect} from 'react'
 // import gsapAnimations from '../animations/bannerAnimation'
 import Prism from 'prismjs'
 import Head from 'next/head'
+import NavBar from '../components/Navbar'
 import Banner from '../components/Banner'
 import CardContainer from './../components/Card';
 
@@ -19,14 +20,17 @@ const Home = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className='home-container'>
+        <NavBar />
         <Banner />
         <CardContainer />
 
       <style jsx>{`
         .home-container {
-          padding: 2rem 3rem;
+          padding: 2rem 2rem;
           margin: 0 auto;
         }
+
+       
       `}</style>
       </div>
     </>

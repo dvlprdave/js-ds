@@ -25,7 +25,7 @@ const NavBar = () => {
 				.nav-wrapper {
 					display: flex;
 					align-items: center;
-					padding: 1.3rem 1.8rem;
+					padding: 1.3rem 0;
 				}	
 
 				h1 {
@@ -64,7 +64,7 @@ const NavBar = () => {
           transform: scaleX(1);
         }
 
-				@media screen and (max-width: 650px) {
+				@media screen and (max-width: 768px) {
           h1 a {
 						color: rgba(211, 174, 54, 1);
 					}

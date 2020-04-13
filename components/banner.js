@@ -73,24 +73,14 @@ const Banner = () => (
         }
       }
 
-      @media screen and (max-width: 1024px) {
-        h2 {
-          font-size: 2.5rem;
-        }
-
-        .banner-img {
-          width: 400px;
-        }
-      }
-
       @media screen and (max-width: 768px) {
         .row {
           flex-direction: column;
           justify-content: center;
-          min-height: 100vh;
         }
 
         h2 {
+          font-size: 1.8rem;
           flex: 0;
           text-align: center;
         }

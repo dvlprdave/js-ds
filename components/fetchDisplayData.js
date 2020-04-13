@@ -45,12 +45,13 @@ function FetchDisplayData({idType}) {
       </div>
       
       <div>
-        <Navbar />
+        <div className='nav-wrapper'>
+          <Navbar />
+        </div>
+
         <div className='method-component'> 
           {renderSelectedCard(selectedMethod)}
         </div>
-
-        {/* <button className='mobile-menu__btn'>Menu</button> */}
       </div>
 
       <style jsx>{`
@@ -58,6 +59,10 @@ function FetchDisplayData({idType}) {
           display: grid;
           grid-template-columns: minmax(200px, 200px) 1fr;
           height: 100vh;
+        }
+
+        .nav-wrapper {
+          padding: 0 1.8rem;
         }
 
         .method-list {
@@ -93,7 +98,7 @@ function FetchDisplayData({idType}) {
         }
 
 
-        @media screen and (max-width: 650px) {
+        @media screen and (max-width: 768px) {
           .wrapper {
             grid-template-columns: 1fr;
             grid-template-rows: 1fr 100px;
@@ -105,7 +110,6 @@ function FetchDisplayData({idType}) {
 
           .method-list {
             grid-row: 2;
-
             flex-direction: row;
             overflow: auto;
             white-space: nowrap;
