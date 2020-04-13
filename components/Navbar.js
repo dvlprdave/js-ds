@@ -36,9 +36,33 @@ const NavBar = () => {
 					display: flex;
 				}
 
-				.nav-links li:first-child {
-					padding-right: 5px;
+				.nav-links a:first-child {
+          padding-right: 10px;
 				}
+
+        .nav-links a {
+          position: relative;
+          transition: 0.4s ease;
+        }
+
+        .nav-links a:before {
+          content: "";
+          position: absolute;
+          width: 88%;
+          height: 2px;
+          margin-top: 8px;
+          bottom: 0;
+          left: 0;
+          background-color: #000;
+          visibility: hidden;
+          transform: scaleX(0);
+          transition: all 0.4s ease;
+        }
+
+        .nav-links a:hover:before {
+          visibility: visible;
+          transform: scaleX(1);
+        }
 
 				@media screen and (max-width: 650px) {
           h1 a {

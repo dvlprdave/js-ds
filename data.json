@@ -54,6 +54,12 @@
         "title": "Object Create",
         "component": "ObjectCreate",
         "description": "Object creation can be done by the following......"
+      },
+      {
+        "id": "object",
+        "title": "Object Assign",
+        "component": "ObjectAssign",
+        "description": "Object assign()"
       }
     ]
   }

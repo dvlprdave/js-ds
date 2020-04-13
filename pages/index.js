@@ -7,7 +7,7 @@ import CardContainer from './../components/Card';
 
 // TODO: Move fetcher into own component
 const Home = () => {
-  useEffect(async () => {
+  useEffect(() => {
     // gsapAnimations()
       Prism.highlightAll()
   }, [])

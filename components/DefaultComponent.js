@@ -9,7 +9,7 @@ const DefaultComponent = ({data}) => (
       )
     })}
   </div>
-);
+)
 
 
 export default DefaultComponent

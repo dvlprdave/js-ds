@@ -23,7 +23,7 @@ export default () => {
           </code>
         </pre>
 
-        <p>map() is immutable in that a new array is created instead of altering the new array.</p>
+        <p>map() is immutable in that a new array is created instead of altering the old array.</p>
 
         <pre>
           <code className='language-javascript'>
